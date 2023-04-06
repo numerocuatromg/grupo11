@@ -10830,34 +10830,6 @@ textarea.form-control-lg {
   }
 }
 
-section article{
-  transition: box-shadow 0.3s ease;
-  background-color: white;
-  margin: 10px 30px 30px 15px;
-  border-radius: 0.5rem;
-  padding: 0.25rem 0;
-  cursor: pointer;
-  width: 370px;
-  text-align: justify;
-  display: inline-block;
-  align-content: initial;
-  padding-left:50px;
-  
-}
-
-.imgmision{
-  width: 300px;
-  margin-left: 20px;
-  /* float: inline-end; */
-}
-
-section article:hover {
-  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
-
-}
-section article h2, section article p {
-  margin: 1rem;
-}
 
 .parrafo {
   height: max-content;
@@ -10867,7 +10839,7 @@ section article h2, section article p {
 .formulario {
     width: 450px;
     margin: auto;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(69, 82, 101, 0.3);
     padding: 10px 20px;
     box-sizing: border-box;
     margin-top: 20px;
@@ -10897,7 +10869,7 @@ section article h2, section article p {
   max-width: 100%;
 }
 .formulario #boton{
-  background: #232323;
+  background: #455265;
   color: #f2f2f2;
   padding: 20px;
 }
@@ -10906,7 +10878,7 @@ section article h2, section article p {
   cursor: pointer;
 }
 
-@media (max-width:480){
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   .formulario{
       width: 100%;
   }
@@ -10941,3 +10913,104 @@ section article h2, section article p {
   opacity: 1;
   filter: contrast(120%);
 }
+
+.fotitonav{
+  width: 7%;
+}
+
+header{
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957) url(../decodeco.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsl(210, 63%, 58%, 0.6), hsl(150, 76%, 34%, 0.6)), url(../decodeco.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;}
+
+.centro{
+  font-family: 'Concert One', cursive;
+}
+
+/*about us */
+
+.contenedorabout{
+ display: flex;
+ justify-content:space-evenly;
+}
+.about{
+  background:#badce3;
+  width: 25%;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+  margin: 10px 30px 30px 15px;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  align-content: initial;
+}
+
+.imgvision{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.imgvision img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.parraf{
+  width: 90%;
+  text-align:justify;
+  margin: 0 auto;
+}
+
+.about:hover{
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+  transform: rotateY(360deg);
+}
+/*responsive*/
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+.contenedorabout{
+  display: block;
+}}
+.about{
+  width: 100%;
+}
+ /*Separadores*/
+ .hero {
+	background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957) url(../decodeco.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, hsl(210, 63%, 58%, 0.6), hsl(150, 76%, 34%, 0.6)), url(../decodeco.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	min-height: 50vh;
+	display:flex;
+	align-items: center;
+}
+
+ .texto{
+  font-family: 'Anton', sans-serif;
+  width: 100%;
+	color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 100px;
+	font-weight: bold;
+
+	background-color: whitesmoke;
+	background-size: cover;
+	background-position-y: 500px;
+	
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+ }
+
+ 
+ /*responsive*/
+ @media only screen and (min-width: 300px) and (max-width: 500px) {
+.texto{
+font-size: 50px;
+}
+ }
