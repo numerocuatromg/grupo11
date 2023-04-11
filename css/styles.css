@@ -10830,13 +10830,12 @@ textarea.form-control-lg {
   }
 }
 
-
 .parrafo {
   height: max-content;
   justify-content: space-evenly;
 }
 
-.formulario {
+/*.formulario {
     width: 450px;
     margin: auto;
     background: rgba(69, 82, 101, 0.3);
@@ -10891,7 +10890,115 @@ textarea.form-control-lg {
 }
 ::placeholder {
   color: whitesmoke;
+}*/
+
+form h1{
+  text-align: center;
+  font-weight: 700;
 }
+.formu{
+  background: rgba(135, 169, 220, 0.3);
+  padding: 40px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 450px;
+  margin: auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  
+}
+.form{
+  width:100%;
+  margin: auto;
+}
+
+form .grupo{
+  position: relative;
+  margin: 45px;
+}
+
+form input{
+  background: none;
+  color: #2b5876;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+form input:focus{
+  outline: none;
+  color: #5e5d5d;
+}
+form label{
+  color: #49454567;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  left:5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+form input:focus~label, form input:valid~label{
+  top: -14px;
+  font-size:12px;
+  color:#2196f3;
+}
+.barra{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to left, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 0.3s ease width;
+  left: 0;
+}
+
+form input:focus~.barra::before{
+  width: 100%;
+}
+
+.formu #boton{  
+  background: #2b5876;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  display:block;
+  width: 60%;
+  margin: 10px auto;
+  color:white;
+  height:40px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .formu{
+      width: 100%;
+  }
+}
+
+.warnings{
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #b06ab3;
+  padding-top: 20px;
+}
+/*fin presupuesto*/
 
 .inicioimagenes {
   display: flex;
@@ -10908,14 +11015,20 @@ textarea.form-control-lg {
 }
 
 .inicioimagenes img:hover{
-  cursor: crosshair;
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
 }
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+.inicioimagenes{
+  width: 100%;
+}
+}
 
 .fotitonav{
-  width: 7%;
+  width: 3%;
+  margin-right: 7px;
+  border-radius: 35%;
 }
 
 header{
@@ -10952,7 +11065,7 @@ header{
 
 .imgvision{
   display: flex;
-  width: 90%;
+  width: 30%;
   margin: 0 auto;
 }
 .imgvision img{
@@ -10960,8 +11073,12 @@ header{
     object-fit: cover;
     object-position: center center;
 }
+#muj img {
+  border-radius: 50%;
+}
+
 .parraf{
-  width: 90%;
+  width: 70%;
   text-align:justify;
   margin: 0 auto;
 }
@@ -10977,6 +11094,26 @@ header{
 }}
 .about{
   width: 100%;
+}
+
+.historia{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+.historia h3{
+  color: black;
+  font-size: large;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+.equipo{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 25px;
+  text-align: center;
+  font-style: oblique;
 }
  /*Separadores*/
  .hero {
@@ -11013,4 +11150,4 @@ header{
 .texto{
 font-size: 50px;
 }
- }
+}
