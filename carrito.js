@@ -1,9 +1,23 @@
 // Definición de productos
 const productos = [
-  { id: 1, nombre: "Producto 1", precio: 10 },
-  { id: 2, nombre: "Producto 2", precio: 20 },
-  { id: 3, nombre: "Producto 3", precio: 30 },
+  { id: "001", nombre: "Latex Borgoña", precio: 1440 },
+  { id: "002", nombre: "Latex Orquídea", precio: 1440 },
+  { id: "003", nombre: "Pincel x 3", precio: 1000 },
+  { id: "004", nombre: "Rodillo nro 22", precio: 1500 },
+  { id: "005", nombre: "Pincel", precio: 250 },
+  { id: "006", nombre: "Enduido interior 1L", precio: 1000 },
+  { id: "007", nombre: "Kit básico pintura", precio: 2500 },
+  { id: "008", nombre: "Rodillo profesional", precio: 440 },
 ];
+
+// Cantidad cantidadTotal de productos
+let cantidadTotal = 0
+
+// Conexión productos HTML
+const listaProductos = document.getElementsByClassName("botones-compra")
+
+// Conexión número de productos visible en carrito
+const ncarrito = document.getElementById("n-carrito")
 
 // Carrito de compras
 const carrito = [];
@@ -21,6 +35,9 @@ function agregarAlCarrito(idProducto) {
     // Si no existe en el carrito, se agrega con cantidad 1
     carrito.push({ ...producto, cantidad: 1 });
   }
+
+  cantidadTotal += 1
+  ncarrito.textContent = cantidadTotal
 
   console.log("Producto agregado al carrito:", producto);
 }
@@ -43,19 +60,15 @@ function eliminarDelCarrito(idProducto) {
   }
 }
 
-// Función para obtener el total de la compra
+// Función para obtener el cantidadTotal de la compra
 function obtenerTotal() {
-  let total = 0;
+  let cantidadTotal = 0;
   carrito.forEach(producto => {
-    total += producto.precio * producto.cantidad;
+    cantidadTotal += producto.precio * producto.cantidad;
   });
-  return total;
+  return cantidadTotal;
 }
 
-// Exportar funciones para su uso en otros archivos
-module.exports = {
-  agregarAlCarrito,
-  eliminarDelCarrito,
-  obtenerTotal,
-  carrito // También se puede acceder al carrito directamente para obtener su contenido
-};
+for(let i = 0; i < listaProductos.length; i++) {
+  listaProductos[i].addEventListener("click", () => { agregarAlCarrito(listaProductos[i].id) })
+}
