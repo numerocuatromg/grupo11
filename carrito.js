@@ -13,7 +13,7 @@ function agregarAlCarrito(idProducto) {
   // Buscar el producto en la lista de productos
   const producto = productos.find(producto => producto.id === idProducto);
 
-  // Verificar si el producto ya está en el carrito
+// Verificar si el producto ya está en el carrito
   const productoExistente = carrito.find(producto => producto.id === idProducto);
   if (productoExistente) {
     productoExistente.cantidad += 1;
