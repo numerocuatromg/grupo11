@@ -10830,74 +10830,19 @@ textarea.form-control-lg {
   }
 }
 
+/* -------------------FORMULARIO-------------------*/
 .parrafo {
   height: max-content;
   justify-content: space-evenly;
 }
 
-/*.formulario {
-    width: 450px;
-    margin: auto;
-    background: rgba(69, 82, 101, 0.3);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-    margin-bottom: 90px;
-}
-.formulario h2{
-  
-  color: whitesmoke;
-  text-align: center;
-  margin: 0;
-  font-size: 30px;
-  margin-bottom: 20px;
-
-}
-.formulario input, textarea {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 7px;
-  box-sizing: border-box;
-  font-size: 17px;
-  border: none;
-}
-.formulario textarea {
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 100%;
-}
-.formulario #boton{
-  background: #455265;
-  color: #f2f2f2;
-  padding: 20px;
-}
-
-.formulario #boton:hover {
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 300px) and (max-width: 500px) {
-  .formulario{
-      width: 100%;
-  }
-}
-.contacto{
-  text-align: center;
-  color: whitesmoke;
-  font-size: 40px;
-  background: rgba(0, 0, 0, 0.4);
-}
-::placeholder {
-  color: whitesmoke;
-}*/
 
 form h1{
   text-align: center;
   font-weight: 700;
 }
 .formu{
-  background: rgba(135, 169, 220, 0.3);
+  background: rgba(8, 65, 31, 0.3);
   padding: 40px 0;
   box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
   border-radius: 10px;
@@ -10935,7 +10880,7 @@ form input:focus{
   color: #5e5d5d;
 }
 form label{
-  color: #49454567;
+  color:#4f5050;
   font-size: 16px;
   position: absolute;
   bottom: 0;
