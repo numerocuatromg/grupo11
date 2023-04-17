@@ -53,8 +53,5 @@ async function handleSubmit(event){
             'Accept' : 'application/json'
         } 
     }) 
-    if (response.ok){
-        this.reset( )
-        alert('Gracias por contactarnos')
-    }
+   
 }
