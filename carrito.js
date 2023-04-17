@@ -10,24 +10,24 @@ const productos = [
   { id: "008", nombre: "Rodillo profesional", precio: 440 },
 ];
 
-// Cantidad cantidadTotal de productos
+// Cantidad total de productos - número del carrito
 let cantidadTotal = 0
 
-// Conexión productos HTML
+// Conexión productos HTML- Busca todos los objetos que son clase botones-compra  para poder esc evento
 const listaProductos = document.getElementsByClassName("botones-compra")
 
-// Conexión número de productos visible en carrito
+// Conexión número de productos visible en carrito - conexión con span del carrito
 const ncarrito = document.getElementById("n-carrito")
 
-// Carrito de compras
+// Carrito de compras - va agregando o sacando según lo que agrega el cliente
 const carrito = [];
 
-// Función para agregar productos al carrito
+// Función para agregar productos al carrito - idProducto es el id que esta en el index 
 function agregarAlCarrito(idProducto) {
-  // Buscar el producto en la lista de productos
+  // Buscar el producto en la lista de productos - recorre array productos y compara id
   const producto = productos.find(producto => producto.id === idProducto);
 
-// Verificar si el producto ya está en el carrito
+// Verificar si el producto ya está en el carrito.- Recorre array y compara id
   const productoExistente = carrito.find(producto => producto.id === idProducto);
   if (productoExistente) {
     productoExistente.cantidad += 1;
@@ -37,7 +37,7 @@ function agregarAlCarrito(idProducto) {
   }
 
   cantidadTotal += 1
-  ncarrito.textContent = cantidadTotal
+  ncarrito.textContent = cantidadTotal // cambia el span del html 
 
   console.log("Producto agregado al carrito:", producto);
 }
@@ -62,13 +62,14 @@ function eliminarDelCarrito(idProducto) {
 
 // Función para obtener el cantidadTotal de la compra
 function obtenerTotal() {
-  let cantidadTotal = 0;
+  let total = 0;
   carrito.forEach(producto => {
-    cantidadTotal += producto.precio * producto.cantidad;
+    total += producto.precio * producto.cantidad;
   });
-  return cantidadTotal;
+  return total;
 }
-
+// recorre el arreglo de productos del html y agrega el listener para el click, cuando hay click llama
+// a agregar el carrito y le pasa el id correspondiente al producto del botón
 for(let i = 0; i < listaProductos.length; i++) {
   listaProductos[i].addEventListener("click", () => { agregarAlCarrito(listaProductos[i].id) })
 }
